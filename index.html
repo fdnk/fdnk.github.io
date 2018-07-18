@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fernando Danko - Página Personal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<script src="Chart.js"/>
+		<script language="javascript">
+		var mostrarMail = function(status){
+					document.getElementById("mostrarMail_div_user").innerHTML = "fernandodanko";
+					document.getElementById("mostrarMail_link").style.display="none"
+					document.getElementById("mostrarMail_div").style.display="inline";
+		}
+		</script>
+	</head>
+	<body>
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#me" class="icon fa-home active"><span>Inicio</span></a>
+						<a href="#acerca" class="icon fa-list"><span>Acerca de mí</span></a>
+						<a href="#academico" class="icon fa-mortar-board"><span>Académico</span></a>
+						<a href="#intereses" class="icon fa-heart"><span>Intereses</span></a>
+						<a href="#contacto" class="icon fa-envelope"><span>Contacto</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="me" class="panel">
+								<header>
+									<h1>Fernando Danko</h1>
+									<!--<p>Estudiante Ing. Electrónica</p>-->
+								</header>
+								<a href="#acerca" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>Acerca de mí</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="acerca" class="panel">
+								<header>
+									<h2>Acerca de mí</h2>
+								</header>
+								
+								<section>
+									<div class="row">
+										<div class="6u 12u$(mobile)">
+											<h3>Estudiante de Ing. Electrónica</h3>
+											<canvas id="myChart" ></canvas>
+										</div>
+										<div class="6u 12u$(mobile)">
+											<h3>Conocimientos de Software</h3>
+											<canvas id="radarChart" ></canvas>
+										</div>
+										
+									</div>
+								</section>
+								
+								<section>
+								<h3>Personal</h3>
+								<p>
+									Siempre me gusto desarmar, investigar, arreglar y romper cosas, atar cablecitos y tirar código. Me gusta compartir mis conocimientos y descubrimientos con la gente o simplemente dar una mano y aprender en el proceso.
+									<br/>
+									Tengo toda la paz que necesito en <a href="https://www.gotquestions.org/Espanol/Quien-es-Jesucristo.html" target="_blank">Jesús</a> mi <a href="https://www.gotquestions.org/Espanol/Preguntas-acerca-Salvacion.html" target="_blank">salvador</a> y mi amigo.
+									<br/>
+									Me gusta tocar el piano, aunque todo lo que sé de teoría musical lo aprendí de YouTube... y de cuando estudié algo de psicoacústica.
+								</p>
+								<p>
+									Y sí, banco que la suma de todos los naturales dé -1/12... vengan de a uno (?)
+								</p>
+								</section>
+								
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ["Terminado", "Restante"],
+        datasets: [{
+            label: '%',
+            data: [95, 5],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+				'rgba(255, 99, 132, 0.2)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+				'rgba(255,99,132,1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+		rotation: 0,
+        animation: {
+			animateRotate: true
+		}
+    }
+});
+var ctx = document.getElementById("radarChart").getContext('2d');
+var myRadarChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+		labels: ['MATLAB / GNU Octave', 'Python', 'C', 'C++', 'Javascript'],
+		datasets: [{
+			label: "Experiencia",
+			data: [	90, //MATLAB
+					60, //Python
+					60, //C
+					40, //C++
+					70  //JS
+				  ],
+			fill:true,
+			backgroundColor: "rgba(255, 99, 132, 0.2)",
+			borderColor: "rgb(255, 99, 132)", 
+			pointBackgroundColor: "rgb(255, 99, 132)",
+			pointBorderColor: "#fff",
+			pointHoverBackgroundColor: "#fff",
+			pointHoverBorderColor: "rgb(255, 99, 132)"
+		}]
+	},
+    options: {
+		scale: {
+			 ticks: {
+                min: 0,
+                max: 100,
+				step: 20
+            }
+		}
+	}
+});
+</script>
+								
+								
+								
+								<!-- <section>
+									<div class="row">
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+										</div>
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
+										</div>
+										<div class="4u$ 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
+										</div>
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
+										</div>
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
+										</div>
+										<div class="4u$ 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
+										</div>
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
+										</div>
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
+										</div>
+										<div class="4u$ 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
+										</div>
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
+										</div>
+										<div class="4u 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+										</div>
+										<div class="4u$ 12u$(mobile)">
+											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
+										</div>
+									</div>
+								</section> -->
+							</article>
+
+							<!-- Otros intereses -->
+								<article id="academico" class="panel">
+									<header>
+										<h2>Académico</h2>
+									</header>
+									<h3>Estudios</h3>
+									<ul>
+										<li>Estudiante de Ing. Electrónica <a href="http://fi.uba.ar/" target="_blank">(FIUBA)</a></li>
+										<li>Bachiller en Producción de Bienes y Servicios</li>
+										<li>Técnico en Electrómecánica</li>
+									</ul>
+									
+									<h3>Docencia</h3>
+									<ul>
+										<li>Ayudante de 2º en Álgebra II - FIUBA
+											<ul>
+												<li>Apuntes en preparación: <a href="https://fdnk.github.io/algebra/" target="_blank">en GitHub</a></li>
+											</ul>
+										</li>
+									</ul>
+									
+									<h3>Actividades Universitarias</h3>
+									<ul>
+										<li>Totur en <a href="https://www.facebook.com/RemandoEnElCBC/" target="_blank">Remando en el CBC</a></li>
+										<li>Miembro de la <a href="https://sites.google.com/view/comelecfiuba/" target="_blank">Comisión de Estudiantes de Ing. Electrónica del CEI (ComElec)</a> </li>
+										<li>Consejero Asesor del Director del Departamento de Electrónica (2013-2014)</li>
+										<li>Miembro de la Comisión Curricular de la Carrera de Ing. Electrónica (2015)</li>
+										
+									</ul>
+								</article>
+
+
+							<!-- Otros intereses -->
+								<article id="intereses" class="panel">
+									<header>
+										<h2>Otros intereses</h2>
+									</header>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/NMY5Nwga9WE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<blockquote>Cuando sea grande quiero ser así de groso</blockquote>
+									
+									<h3>Cosas que tengo en el tintero</h3>
+									Desde hace tiempo tengo un par de ideas para hacer cosas de procesamiento de señales que espero algún día poder
+									ponerme a probar (tal vez cuando me reciba, supongo).
+									
+									<h3>¡Recibite de una vez!</h3>
+									Sí.
+								</article>
+
+						<!-- Contact -->
+							<article id="contacto" class="panel">
+								<header>
+									<h2>Contacto</h2>
+								</header>
+									<div>
+										<div class="row">
+											<div class="boton 6u 12u$(mobile)">
+												<a href="https://www.linkedin.com/in/fdanko" target="_blank" class="icon fa-linkedin">
+													<span>Perfil de LinkedIn</span>
+												</a>
+											</div>
+											<div class="boton 6u 12u$(mobile)">
+												<a href="https://github.com/fdnk" target="_blank" class="icon fa-github">
+													<span>Perfil de GitHub</span>
+												</a>
+											</div>
+											<div class="boton 6u 12u$(mobile)">
+												<a href="#" class="icon fa-envelope-o" onMouseOver="mostrarMail('on')">
+													<span id="mostrarMail_link">Mostrar e-mail</span>
+													<span id="mostrarMail_div" style="display:none">
+														<span id="mostrarMail_div_user">random123</span>@gmail.com
+													</span>
+												</a>
+											</div>
+<!--											<div class="6u$ 12u$(mobile)">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="12u$">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="12u$">
+												<textarea name="message" placeholder="Message" rows="8"></textarea>
+											</div>
+											<div class="12u$">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+-->
+									</div>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>Actualización Enero 2018</li><li>Gracias a <a href="http://html5up.net">HTML5 UP</a> por este <a href="http://html5up.net/astral">bonito diseño</a> que felizmente <a href="http://html5up.net/license">modifiqué</a> :)</li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
